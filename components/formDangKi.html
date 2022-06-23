@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/formDangKi.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="img-pm">
+            <img src="https://images-na.ssl-images-amazon.com/images/G/01/6pm/logos/6pm-Logo-1x._CB485946284_.png" alt="6pm">
+        </div>
+
+        <div class="border item-1">
+            <form class="">
+                <div class="">
+                    <h2>Create account</h2>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Your name</label>
+                    <input id="newName" type="name" class="form-control">
+                  </div>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" id="newUser" class="form-control" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" id="newPassword" class="form-control" placeholder="At least 6 characters">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Re-enter password</label>
+                  <input type="password" id="newRePassword" class="form-control">
+                </div>
+                
+                <div class="button-submit">
+                    <button type="button" onclick="Register()" class="btn btn-danger btn-signIn">Create your 6pm account</button>
+                </div>
+                <hr>
+                <div style="display: inline;">
+                    <p >Alredy have an accout?
+                        <a href="formDangNhap.html">Sign-In</a> </p>
+                    
+                </div>
+
+              </form>
+        </div>
+    </div>
+    <script src="../js/formDangNhap.js"></script>
+</body>
+</html>

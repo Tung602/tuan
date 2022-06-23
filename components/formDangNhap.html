@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formDangNhap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <title>6pm.login</title>
+    <style>
+        fieldset,legend{
+            all: revert; 
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="img-pm ">
+            <img src="https://images-na.ssl-images-amazon.com/images/G/01/6pm/logos/6pm-Logo-1x._CB485946284_.png" alt="6pm">
+        </div>
+
+        <div class="border item-1">
+            <form class="">
+                <div class="">
+                    <h2>Sign-In</h2>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" id="username" class="form-control" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" id="password" class="form-control" >
+                </div>
+                <div class="btn_signIn">
+                    <button type="button" onclick="Login()" class="btn btn-danger btn-signIn">Sign-In</button>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input">
+                  <label class="form-check-label">Keep me signed in.</label>
+                </div>
+                <hr>
+                <fieldset class="btn_newAccount">
+                    <legend>New to 6pm?</legend>
+                        <button type="button" class="btn border border-danger text-danger btn-create"><a style="text-decoration: none;color: red;" href="formDangKi.html">Create your 6pm account</a></button>
+
+                </fieldset>
+                
+                <div class="">
+                    
+                </div>
+
+              </form>
+        </div>
+
+    </div>
+
+    <script src="../js/formDangNhap.js"></script>
+</body>
+</html>

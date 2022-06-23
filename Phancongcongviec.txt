@@ -1,0 +1,33 @@
+Xác định được đề tài < 6pm >
+1. Trang admin riêng để < Thêm, sửa, xoá > sản phẩm
+2. Trang người dùng 
+	+ Có thể làm cho 2 đối tượng: + User có tài khoản
+						+ Khách vãng lai không có tài khoản
+3. Trang web dành cho người dùng và khách vãng lai gồm có:
+	1. Trang chủ
+	2. Trang giày dép (Shoes)
+	3. Trang quần áo (Clothing)
+	4. Trang túi (Bags)
+	5. ... 
+	6. ...
+	7. ...
+	8. ...
+	9. ...
+	10. Brands
+	< Mỗi thứ 1 trang riêng >
+	- Trang đăng nhập
+	- Trang đăng ký
+	- (Phần my account chưa biết vì chưa đăng nhập vào)
+4. Phân công:
+	Trinh:
+		- Admin
+		- Shoes
+		- Bags
+	Linh:
+		- Trang chủ
+		- Women's
+		- Giỏ hàng
+	Nhật:
+		- Men's
+		- Đăng kí/ đăng nhập
+		

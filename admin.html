@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin 6pm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  
+  <!-- add -->
+  <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thêm sản phẩm mới</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputNameAdd">Tên sản phẩm</label>
+                    <input type="text" class="form-control" id="inputNameAdd" placeholder="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputBrandAdd">Thương hiệu</label>
+                    <input type="text" class="form-control" id="inputBrandAdd" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputImageAdd">Link ảnh</label>
+                    <input type="text" class="form-control" id="inputImageAdd" placeholder="https://">
+                  </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputPriceAdd">Giá</label>
+                        <input type="text" class="form-control" id="inputPriceAdd" placeholder="$">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputAmountAdd">Số lượng</label>
+                        <input type="text" class="form-control" id="inputAmountAdd" placeholder="">
+                    </div>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-primary btn-add">Thêm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- edit -->
+  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sửa sản phẩm</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputNameEdit">Tên sản phẩm</label>
+                    <input type="text" class="form-control" id="inputNameEdit" placeholder="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputBrandEdit">Thương hiệu</label>
+                    <input type="text" class="form-control" id="inputBrandEdit" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputImageEdit">Link ảnh</label>
+                    <input type="text" class="form-control" id="inputImageEdit" placeholder="https://">
+                  </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputPriceEdit">Giá</label>
+                        <input type="text" class="form-control" id="inputPriceEdit" placeholder="$">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputAmountEdit">Số lượng</label>
+                        <input type="text" class="form-control" id="inputAmountEdit" placeholder="">
+                    </div>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-primary btn-edit">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- delete -->
+  <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bạn có muốn xóa sản phẩm này?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+          <button type="button" class="btn btn-primary btn-delete" data-dismiss="modal">Có</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- notification -->
+
+  <div class="modal fade" id="notification" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p class="notification-desc"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="./index.html">
+                <img src="https://images-na.ssl-images-amazon.com/images/G/01/6pm/logos/6pm-Logo-1x._V285053994_.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Danh mục
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Shoes</a>
+                            <a class="dropdown-item" href="#">Bags</a>
+                            <a class="dropdown-item" href="#">Man's</a>
+                            <a class="dropdown-item" href="#">Woman's</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đơn hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Người dùng</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="#"><i class="fas fa-sign-out mr-2"></i>Logout</a>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid row justify-content-between">
+        <h3 class="m-5">Quản lý sản phẩm</h3>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>    
+    </div>
+    <div class="container-fluid">
+        <div class="list-course">
+            <table style="width:100%" class="products-container table table-success table-striped">
+                <!-- Javascript render -->
+            </table>
+            <div class="task">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add">Thêm mới</button>
+            </div>
+        </div>
+    </div>
+    <!-- END: CONTENT -->
+
+    <!-- link js bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <!-- Link javascript -->
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>
